@@ -24,5 +24,5 @@ A 6-month self-taught journey to master the C programming language through daily
 *"The only way to learn a new programming language is by writing programs in it." - Dennis Ritchie*
 
 **Start Date**: 15/10/2025  
-**Target End Date**: 01/06/2026  
+**Target End Date**: 01/06/2027  
 **Commitment**: Daily coding practice
