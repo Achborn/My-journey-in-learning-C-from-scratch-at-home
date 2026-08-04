@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+# Check if exactly one argument is provided
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <filename>"
+    exit 1
+fi
+
+FILE="$1"
+f_name="${FILE%.*}"  # Remove file extension for output name
+
+# Compile the file with strict warnings
+gcc -Wall -Wextra -Werror "$FILE" -o "$f_name"
+
+# Check if compilation was successful
+if [ $? -eq 0 ]; then
+    ./"$f_name"
+    rm "$f_name"
+else
+    echo "Compilation failed!"
+    exit 1
+fi
